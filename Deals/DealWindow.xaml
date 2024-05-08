@@ -1,0 +1,34 @@
+﻿<Window x:Class="CourseWorkWPF.DealWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWorkWPF"
+        mc:Ignorable="d"
+        Title="DealWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" x:Name="DealGrid" Margin="0,0,201,178" SelectionChanged="DealGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код" Binding="{Binding Id}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Deal.Date}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Код клиента" Binding="{Binding Deal.CustomerId}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Count}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalPrice}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Товары" Binding="{Binding Product.Name}" IsReadOnly="True"/>
+                <!-- Создание столбца для отображения всех товаров в одной ячейке -->
+
+                <!--<DataGridTemplateColumn Header="Товары">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Products, Converter={StaticResource ProductsListConverter}}" TextWrapping="Wrap" IsEnabled="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="CreateDealToPage" Content="Добавить" HorizontalAlignment="Left" Margin="38,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.57" Width="58" Click="CreateDealToPage_Click"/>
+        <Button x:Name="UpdateDealBtn" Content="Редактировать" HorizontalAlignment="Left" Margin="542,295,0,0" VerticalAlignment="Top" IsEnabled="False" Width="104" Click="UpdateDealBtn_Click" Height="29"/>
+        <Button x:Name="DeleteDealBtn" Content="Удалить" HorizontalAlignment="Left" Margin="38,338,0,0" VerticalAlignment="Top" IsEnabled="False" Width="58" Click="DeleteDealBtn_Click"/>
+    </Grid>
+</Window>
