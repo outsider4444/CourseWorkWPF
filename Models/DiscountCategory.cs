@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseWorkWPF.Models
 {
-    public partial class DiscountCategory
+    public class DiscountCategory
     {
         public DiscountCategory()
         {
@@ -16,8 +16,8 @@ namespace CourseWorkWPF.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public string MinTotalPrice { get; set; }
-        public string MaxTotalPrice { get; set; }
+        public int MinTotalPrice { get; set; }
+        public int MaxTotalPrice { get; set; }
 
         public virtual ICollection<Discount> Discounts { get; set; }
         public virtual ICollection<Product> Products { get; set; }

@@ -1,5 +1,5 @@
 ﻿using CourseWorkWPF.Data;
-using CourseWorkWPF.Models;
+using CourseWorkWPF.DiscountCategories;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
@@ -50,6 +50,14 @@ namespace CourseWorkWPF
             ProductsWindow productsWindow = new ProductsWindow();
 
             productsWindow.Show();
+            this.Close();
+        }
+
+        private void DealCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            DiscountCategoryWindow categoryWindow = new DiscountCategoryWindow();
+
+            categoryWindow.Show();
             this.Close();
         }
     }

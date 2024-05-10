@@ -23,7 +23,7 @@ namespace CourseWorkWPF.Products
     /// </summary>
     public partial class CreateProductWindow : Window
     {
-        List<DiscountCategory> discountCategories;
+        List<Models.DiscountCategory> discountCategories;
 
         public CreateProductWindow()
         {
@@ -48,7 +48,7 @@ namespace CourseWorkWPF.Products
             string wprice = ProductWPriceCreateInput.Text;
             string rprice = ProductRPriceCreateInput.Text;
             string description = ProductDescriptionCreateInput.Text;
-            DiscountCategory? newDiscountCategory = ProductDiscountCategoryCreateComboBox.SelectedItem as DiscountCategory;
+            DiscountCategory? newDiscountCategory = ProductDiscountCategoryCreateComboBox.SelectedItem as Models.DiscountCategory;
             // Проверяем, что все поля заполнены
             if (newDiscountCategory == null || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(wprice) || string.IsNullOrEmpty(rprice) || string.IsNullOrEmpty(description))
             {
@@ -63,7 +63,8 @@ namespace CourseWorkWPF.Products
                 Description = description,
                 DiscountCategoryId = newDiscountCategory.Id
             };
-            // Добавляем нового клиента в базу данных
+
+            // Добавляем нового продукта в базу данных
             using (var dbContext = new AppDbContext())
             {
                 dbContext.Products.Add(product);
@@ -72,6 +73,7 @@ namespace CourseWorkWPF.Products
                 ProductViewModel DataContext = new ProductViewModel();
                 DataContext.LoadData();
             }
+
             // Очищаем текстовые поля после успешного добавления
             ClearFields();
 

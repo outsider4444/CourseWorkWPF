@@ -35,7 +35,7 @@ namespace CourseWorkWPF.Repository
             using (var dbContext = new AppDbContext())
             {
                 Products = new ObservableCollection<Product>(dbContext.Products.ToList());
-                List<DiscountCategory> discountCategories = new List<DiscountCategory>(dbContext.DiscountCategories.ToList());
+                List<Models.DiscountCategory> discountCategories = new List<Models.DiscountCategory>(dbContext.DiscountCategories.ToList());
                 for (int i = 0; i < Products.Count; i++)
                 {
                     for (int j = 0; j < discountCategories.Count; j++)

@@ -22,10 +22,10 @@ namespace CourseWorkWPF.Products
     /// </summary>
     public partial class UpdateProductWindow : Window
     {
-        List<DiscountCategory> discountCategories;
+        List<Models.DiscountCategory> discountCategories;
         DiscountCategoryViewModel discountCategoryViewModel = new DiscountCategoryViewModel();
         Product updatableProduct;
-        public UpdateProductWindow(Product product, DiscountCategory discountCategory)
+        public UpdateProductWindow(Product product, Models.DiscountCategory discountCategory)
         {
             InitializeComponent();
 
@@ -56,7 +56,7 @@ namespace CourseWorkWPF.Products
             int rPrice = Int32.Parse(ProductRPriceUpdateInput.Text);
             int wPrice = Int32.Parse(ProductWPriceUpdateInput.Text);
             string description = ProductDescriptionUpdateInput.Text;
-            DiscountCategory? category = ProductDiscountCategoryUpdateComboBox.SelectedItem as DiscountCategory;
+            Models.DiscountCategory? category = ProductDiscountCategoryUpdateComboBox.SelectedItem as Models.DiscountCategory;
             int category_id = category.Id;
 
             updatableProduct.Name = name;

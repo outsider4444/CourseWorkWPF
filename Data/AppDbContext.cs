@@ -16,7 +16,7 @@ namespace CourseWorkWPF.Data
         public DbSet<Deal> Deals { get; set; }
         public DbSet<DealProduct> DealProducts { get; set; }
         public DbSet<Discount> Discounts { get; set; }
-        public DbSet<DiscountCategory> DiscountCategories { get; set; }
+        public DbSet<Models.DiscountCategory> DiscountCategories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

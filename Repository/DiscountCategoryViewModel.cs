@@ -12,8 +12,8 @@ namespace CourseWorkWPF.Repository
 {
     class DiscountCategoryViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<DiscountCategory> _discountCategories;
-        public ObservableCollection<DiscountCategory> DiscountCategories
+        private ObservableCollection<Models.DiscountCategory> _discountCategories;
+        public ObservableCollection<Models.DiscountCategory> DiscountCategories
         {
             get { return _discountCategories; }
             set
@@ -32,16 +32,16 @@ namespace CourseWorkWPF.Repository
         {
             using (var dbContext = new AppDbContext())
             {
-                DiscountCategories = new ObservableCollection<DiscountCategory>(dbContext.DiscountCategories.ToList());
+                DiscountCategories = new ObservableCollection<Models.DiscountCategory>(dbContext.DiscountCategories.ToList());
             }
         }
 
-        public DiscountCategory GetDiscountCategoryById(int id)
+        public Models.DiscountCategory GetDiscountCategoryById(int id)
         {
             return DiscountCategories.FirstOrDefault(category => category.Id == id);
         }
 
-        public void DeleteDiscountCategory(DiscountCategory discountCategory)
+        public void DeleteDiscountCategory(Models.DiscountCategory discountCategory)
         {
             using (var dbContext = new AppDbContext())
             {
@@ -50,7 +50,7 @@ namespace CourseWorkWPF.Repository
             }
         }
 
-        public void UpdateDiscountCategory(DiscountCategory discountCategory)
+        public void UpdateDiscountCategory(Models.DiscountCategory discountCategory)
         {
             using (var dbContext = new AppDbContext())
             {

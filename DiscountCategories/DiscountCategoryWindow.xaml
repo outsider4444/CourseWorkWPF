@@ -1,0 +1,41 @@
+﻿<Window x:Class="CourseWorkWPF.DiscountCategories.DiscountCategoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWorkWPF.DiscountCategories"
+        mc:Ignorable="d"
+        Title="DiscountCategoryWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid AutoGenerateColumns="false"  x:Name="CategoryGrid" Margin="0,0,201,178" SelectionChanged="CategoryGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код" Binding="{Binding Id}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Минимальная цена" Binding="{Binding MinTotalPrice}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Максимальная цена" Binding="{Binding MaxTotalPrice}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name="CreateCategoryToPage" Content="Добавить" HorizontalAlignment="Left" Margin="38,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="68" BorderThickness="1,1,1,1" Height="24" Click="CreateCategoryToPage_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="UpdateCategoryBtn" Content="Редактировать" HorizontalAlignment="Left" Margin="531,291,0,0" VerticalAlignment="Top" IsEnabled="False" Width="74" Height="24" Click="UpdateCategoryBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="DeleteCategoryBtn" Content="Удалить" HorizontalAlignment="Left" Margin="38,338,0,0" VerticalAlignment="Top" IsEnabled="False" Width="68" Height="24" Click="DeleteCategoryBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
