@@ -18,5 +18,6 @@
         <Button x:Name="CreateCustomerToPage" Content="Добавить" HorizontalAlignment="Left" Margin="38,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.57" Click="CreateCustomer_Button_Click" Width="58"/>
         <Button x:Name="DeleteCustomerBtn" Content="Удалить" HorizontalAlignment="Left" Margin="38,338,0,0" VerticalAlignment="Top" Click="DeleteCustomer_Button_Click" IsEnabled="False" Width="58"/>
         <Button x:Name="UpdateCustomerBtn" Content="Редактировать" HorizontalAlignment="Left" Margin="572,300,0,0" VerticalAlignment="Top" IsEnabled="False" Width="74" Click="UpdateCustomer_Button_Click"/>
+        <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Left" Margin="572,343,0,0" VerticalAlignment="Top" Click="BackBtn_Click"/>
     </Grid>
 </Window>

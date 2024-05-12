@@ -35,7 +35,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Скидки" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top"  Width="173" IsEnabled="False" Height="30" Background="White" FontWeight="UltraLight" BorderThickness="0.3,0.1,0.3,0.5" FontSize="18">
+        <Button Content="Скидки" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top"  Width="173" Height="30" Background="White" FontWeight="UltraLight" BorderThickness="0.3,0.1,0.3,0.5" FontSize="18" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="16"/>

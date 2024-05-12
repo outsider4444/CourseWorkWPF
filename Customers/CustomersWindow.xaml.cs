@@ -88,5 +88,12 @@ namespace CourseWorkWPF
                 DeleteCustomerBtn.IsEnabled = false;
             }
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
     }
 }

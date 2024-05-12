@@ -16,7 +16,6 @@
                 <DataGridTextColumn Header="Сумма" Binding="{Binding TotalPrice}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Товары" Binding="{Binding Product.Name}" IsReadOnly="True"/>
                 <!-- Создание столбца для отображения всех товаров в одной ячейке -->
-
                 <!--<DataGridTemplateColumn Header="Товары">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -30,5 +29,6 @@
         <Button x:Name="CreateDealToPage" Content="Добавить" HorizontalAlignment="Left" Margin="38,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.57" Width="58" Click="CreateDealToPage_Click"/>
         <Button x:Name="UpdateDealBtn" Content="Редактировать" HorizontalAlignment="Left" Margin="542,295,0,0" VerticalAlignment="Top" IsEnabled="False" Width="104" Click="UpdateDealBtn_Click" Height="29"/>
         <Button x:Name="DeleteDealBtn" Content="Удалить" HorizontalAlignment="Left" Margin="38,338,0,0" VerticalAlignment="Top" IsEnabled="False" Width="58" Click="DeleteDealBtn_Click"/>
+        <Button x:Name="BackBtn" Content="Назад" HorizontalAlignment="Left" Margin="572,343,0,0" VerticalAlignment="Top" Click="BackBtn_Click"/>
     </Grid>
 </Window>
